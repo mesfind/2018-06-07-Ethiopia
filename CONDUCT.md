@@ -4,7 +4,7 @@ title: "Contributor Code of Conduct"
 permalink: /conduct/
 ---
 
-We are committed to making participation in this project a harassment-free experience for everyone,
+We are committed to making participation in this conference a harassment-free experience for everyone,
 regardless of level of experience,
 gender,
 gender identity and expression,
