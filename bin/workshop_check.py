@@ -180,7 +180,7 @@ def check_latitude_longitude(latlng):
         return False
 
 
-def check_organizers(organizers):
+def check_instructors(instructors):
     """
     'instructor' must be a non-empty comma-separated list of quoted
     names, e.g. ['First name', 'Second name', ...'].  Do not use 'TBD'
@@ -188,10 +188,10 @@ def check_organizers(organizers):
     """
 
     # YAML automatically loads list-like strings as lists.
-    return isinstance(organizers, list) and len(organizers) > 0
+    return isinstance(instructors, list) and len(instructors) > 0
 
 
-def check_speakers(speakers):
+def check_helpers(helpers):
     """
     'helper' must be a comma-separated list of quoted names,
     e.g. ['First name', 'Second name', ...'].  The list may be empty.
@@ -199,7 +199,7 @@ def check_speakers(speakers):
     """
 
     # YAML automatically loads list-like strings as lists.
-    return isinstance(speakers, list) and len(speakers) >= 0
+    return isinstance(helpers, list) and len(helpers) >= 0
 
 
 @look_for_fixme
@@ -286,13 +286,13 @@ HANDLERS = {
                    'latlng invalid. Check that it is two floating point ' +
                    'numbers, separated by a comma'),
 
-    'organizer': (True, check_organizers,
+    'organizer': (True, check_instructors,
                    'instructor list isn\'t a valid list of format ' +
-                   '["First organizers", "Second organizer",..]'),
+                   '["First instructor", "Second instructor",..]'),
 
-    'speaker':     (True, check_speaker,
+    'speaker':     (True, check_helper,
                    'helper list isn\'t a valid list of format ' +
-                   '["First speaker", "Second speaker",..]'),
+                   '["First helper", "Second helper",..]'),
 
     'contact':    (True, check_emails,
                    'contact email list isn\'t a valid list of format ' +
