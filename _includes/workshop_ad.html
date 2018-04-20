@@ -12,17 +12,17 @@
         </div>
         <div class="col-md-6">
           <p>
-          <strong>Instructors:</strong>
-          {% if page.instructor %}
-          {{page.instructor | join: ', ' %}}
+          <strong>Organizers:</strong>
+          {% if page.orginizer %}
+          {{page.organizer | join: ', ' %}}
           {% else %}
           to be announced.
           {% endif %}
           </p>
-          {% if page.helper %}
+          {% if page.speaker %}
           <p>
-          <strong>Helpers:</strong>
-          {{page.helper | join: ', ' %}}
+          <strong>Speakers:</strong>
+          {{page.speaker | join: ', ' %}}
           </p>
           {% endif %}
         </div>
